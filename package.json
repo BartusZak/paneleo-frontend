@@ -1,7 +1,7 @@
 {
   "name": "paneleo-frontend",
   "version": "0.1.0",
-  "homepage": "https://bartuszak.github.io/paneleo",
+  "homepage": "https://bartuszak.github.io/paneleo-frontend",
   "private": true,
   "dependencies": {
     "gh-pages": "^1.2.0",
