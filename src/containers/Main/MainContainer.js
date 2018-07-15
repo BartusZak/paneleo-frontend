@@ -1,16 +1,18 @@
-import React, { Component } from "react";
-import { Route, Link } from "react-router-dom";
+import React from "react";
+import { Route, Link, Switch } from "react-router-dom";
 
 import LoggingContainer from "./Logging/LoggingContainer";
 import AboutContainer from "./About/AboutContainer";
 
-export default class MainContainer extends Component {
-  render() {
-    return (
-      <div>
-        <p>Main Container</p>
-        <Link to="/logging">Logowanie</Link>
-      </div>
-    );
-  }
-}
+const MainContainer = ({ match }) => {
+  return (
+    <div>
+      <Switch>
+        <Route path={`${match.url}/about`} component={AboutContainer} />
+        <Route exac path="/" component={LoggingContainer} />
+      </Switch>
+    </div>
+  );
+};
+
+export default MainContainer;

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Auxi from "hoc/Auxi";
 
 import ToolBar from "./ToolBar";
+import MainMenu from "./MainMenu";
 
 export default class LayoutContainer extends Component {
   render() {
@@ -9,7 +10,10 @@ export default class LayoutContainer extends Component {
     return (
       <Auxi>
         <ToolBar />
-        <main>{children}</main>
+        <main id="main">
+          <MainMenu />
+          <section id="content">{children}</section>
+        </main>
       </Auxi>
     );
   }

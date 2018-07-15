@@ -1,7 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
+import Card from "hoc/theme/card";
 
-export default class AboutContainer extends Component {
-  render() {
-    return <div> About</div>;
-  }
-}
+const AboutContainer = () => {
+  return <Card> About</Card>;
+};
+
+export default AboutContainer;
