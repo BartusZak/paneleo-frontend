@@ -2,10 +2,10 @@ import { injectGlobal } from "styled-components";
 import media from "./media";
 
 injectGlobal`
-    @font-face {
-        font-family: 'Futura Bold Italic';
-        src: url('assets/fonts/FuturaBoldItalic.ttf');
-    }
+@font-face {
+    font-family: 'Futura Bold Italic';
+    src: url('fonts/FuturaBoldItalic.ttf') format('truetype');
+}
     
     body {
         font-family: noto-sans;

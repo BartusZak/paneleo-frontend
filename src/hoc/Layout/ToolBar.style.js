@@ -30,7 +30,7 @@ const ToolBarContainer = styled.header`
           content: "Admin Panel";
           display: block;
           font-weight: 400;
-          font-size: 18px;
+          font-size: 15px;
           line-height: 100%;
           margin-top: -3px;
           color: rgba(255, 255, 255, 0.6);

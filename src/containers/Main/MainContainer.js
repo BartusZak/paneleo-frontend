@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Link, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
 import LoggingContainer from "./Logging/LoggingContainer";
 import AboutContainer from "./About/AboutContainer";
