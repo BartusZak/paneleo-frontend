@@ -1,5 +1,4 @@
 import { injectGlobal } from "styled-components";
-import media from "./media";
 
 injectGlobal`
 @font-face {

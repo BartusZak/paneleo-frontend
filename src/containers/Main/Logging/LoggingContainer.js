@@ -10,7 +10,7 @@ const formData = {
   ],
   validation: [
     { minLength: null, maxLength: 20, canBeNull: false, valide: "text" },
-    { minLength: null, maxLength: 20, canBeNull: false, valide: "text" }
+    { minLength: null, maxLength: 20, canBeNull: false, valide: "password" }
   ],
   buttonLabel: "Zaloguj"
 };

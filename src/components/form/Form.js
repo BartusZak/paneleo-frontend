@@ -1,37 +1,35 @@
 import React from "react";
 
-import { Form as FormInformed, Text, BasicText, asField } from "informed";
+import { Form as FormInformed, Text } from "informed";
 import PropTypes from "prop-types"; // ES6
 
 import FormInformedDiv from "./Form.style";
 
 import Button from "@material-ui/core/Button";
 
+import ValidateInput from "./ValidateInput";
 const Form = ({ formData, getValuesFromForm, formState }) => {
-  Form.propTypes = {
-    formData: PropTypes.shape({
-      id: PropTypes.string,
-      label: PropTypes.string,
-      placeholder: PropTypes.string
-    }).isRequired,
-    buttonLabel: PropTypes.string.isRequired
-  };
-
   let formFields = formData.formFields.map((field, index) => {
+    let validation = formData.validation[index];
     return (
       <fieldset key={index}>
-        <Text field={field.id} id={`${field.label}-form`} required />
+        <Text
+          type={validation.valide}
+          field={field.id}
+          id={`${field.label}-form`}
+          required
+          validateOnBlur
+          validateOnChange
+          validate={value => ValidateInput(value, validation)}
+        />
         <label htmlFor={`${field.label}-form`}>{field.label}:</label>
         <div className="after" />
+        <div className="input-error">
+          <span>Error</span>
+        </div>
       </fieldset>
     );
   });
-
-  const validate = value => {
-    return !value || value.length < 5
-      ? "Field must be longer than five characters"
-      : null;
-  };
 
   return (
     <FormInformedDiv>
@@ -46,5 +44,26 @@ const Form = ({ formData, getValuesFromForm, formState }) => {
       </FormInformed>
     </FormInformedDiv>
   );
+};
+
+Form.propTypes = {
+  formData: PropTypes.shape({
+    formFields: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        label: PropTypes.string.isRequired,
+        placeholder: PropTypes.string.isRequired
+      })
+    ).isRequired,
+    validation: PropTypes.arrayOf(
+      PropTypes.shape({
+        minLength: PropTypes.number,
+        maxLength: PropTypes.number.isRequired,
+        canBeNull: PropTypes.bool.isRequired,
+        valide: PropTypes.string.isRequired
+      })
+    ).isRequired,
+    buttonLabel: PropTypes.string.isRequired
+  })
 };
 export default Form;
