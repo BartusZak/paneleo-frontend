@@ -1,7 +1,7 @@
 import RegexPatterns from "constants/RegexPatterns";
 
-export const ValidateInput = (value, validation) => {
-  console.log(value, validation);
+export const ValidateInput = (value = "", validation) => {
+  console.log(value);
   if (!validation.canBeNull && value.length === 0) {
     return "To pole nie może być puste.";
   }

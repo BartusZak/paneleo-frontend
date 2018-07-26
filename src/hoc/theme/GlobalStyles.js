@@ -5,7 +5,16 @@ injectGlobal`
     font-family: 'Futura Bold Italic';
     src: url('fonts/FuturaBoldItalic.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'Roboto Condensed', sans-serif;
+    src: url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+  }
     
+  @font-face {
+    font-family: 'Eczar', serif;
+    src: url('https://fonts.googleapis.com/css?family=Eczar');;
+  }
+  
     body {
         font-family: noto-sans;
         font-size: 13px;

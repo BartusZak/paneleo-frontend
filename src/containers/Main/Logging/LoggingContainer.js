@@ -9,25 +9,19 @@ const formData = {
     { id: "haslo", label: "Hasło", placeholder: "Podaj Hasło..." }
   ],
   validation: [
-    { minLength: null, maxLength: 20, canBeNull: false, valide: "text" },
-    { minLength: null, maxLength: 20, canBeNull: false, valide: "password" }
+    { minLength: 5, maxLength: 20, canBeNull: false, valide: "text" },
+    { minLength: 8, maxLength: 20, canBeNull: false, valide: "password" }
   ],
   buttonLabel: "Zaloguj"
 };
 
 export default class LoggingContainer extends Component {
   state = {};
-  getValuesFromForm = form => {
-    console.log(form);
-  };
+
   render() {
     return (
       <Paper>
-        <Form
-          formData={formData}
-          getValuesFromForm={this.getValuesFromForm}
-          formState={{ isSubmitted: false }}
-        />
+        <Form formData={formData} />
       </Paper>
     );
   }

@@ -12,16 +12,33 @@ const FormInformedDiv = styled.div`
   }
 
   label {
+    font-family: "Roboto Condensed", sans-serif;
     display: block;
     position: absolute;
     top: 18px;
     color: rgba(0, 0, 0, 0.3);
     transform-origin: left;
     transition: all 0.3s ease;
+    font-size: 12px;
+  }
+
+  .input-error {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 16px;
+    margin-top: 5px;
+    span {
+      padding-left: 10px;
+      font-family: "Roboto Condensed", sans-serif;
+      color: #e50000;
+      font-size: 12px;
+      position: absolute;
+    }
   }
 
   input:focus ~ label {
-    color: red;
+    color: black;
   }
 
   input:focus ~ label,
@@ -31,7 +48,8 @@ const FormInformedDiv = styled.div`
   }
 
   input {
-    font-size: 20px;
+    font-family: "Eczar", serif;
+    font-size: 16px;
     width: 100%;
     border: none;
     margin-top: 10px;
@@ -44,7 +62,7 @@ const FormInformedDiv = styled.div`
   .after {
     width: 100%;
     height: 2px;
-    background: linear-gradient(to right, red 50%, transparent 50%);
+    background: linear-gradient(to right, black 50%, transparent 50%);
     background-color: rgba(0, 0, 0, 0.3);
     background-size: 200% 100%;
     background-position: 100% 0;
