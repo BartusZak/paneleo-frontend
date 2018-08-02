@@ -5,8 +5,7 @@ import { ConnectedRouter } from "connected-react-router";
 import store, { history } from "./redux/store/store";
 import App from "./App";
 
-import "hoc/theme/GlobalStyles";
-
+import "./hoc/theme/GlobalStyles";
 const target = document.querySelector("#root");
 
 render(

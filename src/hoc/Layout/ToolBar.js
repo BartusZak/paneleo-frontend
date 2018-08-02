@@ -1,8 +1,7 @@
 import React from "react";
 
 import ToolBarContainer from "./ToolBar.style";
-import PaneleoIcon from "assets/img/paneleo/paneleo_icon.png";
-
+import PaneleoIcon from "../../assets/img/paneleo/paneleo_icon.png";
 const ToolBar = props => (
   <ToolBarContainer>
     <div>

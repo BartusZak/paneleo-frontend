@@ -18,10 +18,12 @@ export default class Form extends Component {
     const { formData } = this.props;
     const { formDetails } = this.state;
 
+    console.log(formDetails);
+
     let formFields = formData.formFields.map((field, index) => {
       let validation = formData.validation[index];
-
-      let inputError = null;
+      console.log(validation);
+      let inputError = "";
 
       if (formDetails) {
         if (formDetails.errors) {
@@ -30,6 +32,7 @@ export default class Form extends Component {
           });
         }
       }
+
       return (
         <fieldset key={index}>
           <Text

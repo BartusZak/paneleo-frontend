@@ -6,8 +6,9 @@ import {
   Redirect
 } from "react-router-dom";
 
-import LayoutContainer from "hoc/Layout/LayoutContainer";
-import MainContainer from "containers/Main/MainContainer";
+import LayoutContainer from "./hoc/Layout/LayoutContainer";
+// import MainContainer from "containers/Main/MainContainer";
+import MainContainer from "./containers/Main/MainContainer";
 
 import PageNotFoundCotainer from "./containers/Main/PageNotFound/PageNotFoundContainer";
 import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";

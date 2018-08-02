@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Form from "components/form/Form";
-
+// import Form from "../components/form/Form";
+import Form from "../../../components/form/Form";
 import Paper from "@material-ui/core/Paper";
 
 const formData = {
